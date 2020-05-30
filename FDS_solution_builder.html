@@ -1,0 +1,263 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12  p-3"><h6><strong>Build your own budget solution for point-to-point events and training in 3 quick questions</strong></h6></div>
+   </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12  p-3"><h6>Which sport do you require a timing system for?</h6></div>
+   </div>
+</div>
+      
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+        <button id="motorsport_sport" class="btn btn-outline-dark" style="font-size:16px">Motorsport</button>
+      <button id="showjumping_sport" class="btn btn-outline-dark" style="font-size:16px">Showjumping</button>
+      <button id="wintersport_sport" class="btn btn-outline-dark" style="font-size:16px">Winter Sport</button>
+      <button id="training_sport" class="btn btn-outline-dark" style="font-size:16px">Training</button>
+    </div>
+  </div>
+</div>
+      
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12  p-3"><h6>How many timing points do you require?</h6></div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <button id="one_timing_point" class="btn btn-outline-dark" style="font-size:16px">1 Timing Point</button>
+      <button id="two_timing_point" class="btn btn-outline-dark" style="font-size:16px">2 Timing Points</button>
+      <button id="three_timing_point" class="btn btn-outline-dark" style="font-size:16px">3 Timing Points</button>
+      <button id="four_timing_point" class="btn btn-outline-dark" style="font-size:16px">4 Timing Points</button>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12  p-3"><h6>Do you require a display?</h6></div>
+  </div>
+</div>
+      
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <button id="display_yes" class="btn btn-outline-dark" style="font-size:16px">Yes</button>
+      <button id="display_no" class="btn btn-outline-dark" style="font-size:16px">No</button>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4  p-4"><h3>Your Solution</h3>
+      <p id="your_solution_motorsport"></p>
+      <p id="your_solution_timing_points"></p>
+      <p id="your_solution_display"></p>
+    </div>
+    <div class="col-md-8  p-4"><h3 id="total_cost"></h3>
+      <p id="app_itemised"></p>
+      <p id="timer_itemised"></p>
+      <p id="photocell_itemised"></p>
+      <p id="display_itemised"></p></div>
+  </div>
+</div>
+
+<hr style="border:1px solid rgb(122, 122, 122)">
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-2  p-4"><h3>App</h3></div>
+    <div class="col-lg-2"><img id="app_image" width="100%"></i></div>
+    <div class="col-lg-8  p-3"><p id="app_text"></p>
+      <a id="app_link"></a></div>
+  </div>
+</div>
+
+<hr style="border:1px solid rgb(122, 122, 122)">
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-2 p-4"><h3>Timer</h3></div>
+    <div class="col-lg-2"><img id="timer_image" width="100%"></i></div>
+    <div class="col-lg-8 p-3"><p id="timer_text"></p>
+      <a id="timer_link"></a></div>
+  </div>
+</div>
+
+<hr style="border:1px solid rgb(122, 122, 122)">
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-2  p-4"><h3>Beams</h3></div>
+    <div class="col-lg-2"><img id="photocell_image" width="100%"></div>
+    <div class="col-lg-8  p-3"><p id="photocell_text"></p>
+      <a id="photocell_link"></a></div>
+  </div>
+</div>
+
+<hr style="border:1px solid rgb(122, 122, 122)">
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-2  p-4"><h3>Display</h3></div>
+    <div class="col-lg-2"><img id="display_image" width="100%"></div>
+    <div class="col-lg-8  p-3"><p id="display_text"></p>
+      <a id="display_link"></a></div>
+  </div>
+</div>
+
+<script>
+  let appSelection = "";
+  const timerPrice = 490;
+  let photocellPrice = 0;
+  let displayPrice = 0;
+  let solutionPrice = timerPrice + photocellPrice + displayPrice;
+  function motorSport() {
+    document.getElementById('your_solution_motorsport').innerHTML = "+ Motorsports";
+    document.getElementById('app_itemised').innerHTML = "1 x SmartChrono Annual Sub (£40)";
+    document.getElementById('timer_itemised').innerHTML = "1 x TBox (£490)";
+    solutionPrice = timerPrice + photocellPrice + displayPrice;
+    appSelection = "+ £40 SmartChrono annual sub";
+    document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
+    document.getElementById('app_image').setAttribute("src", "https://www.sportstimingsystems.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/m/smart_chrono_app.png");
+    document.getElementById('app_text').innerHTML = "SmartChrono: The app for quick and easy point-to-point timing. Combine with the low cost T-Box and photocells for a simple timing set-up that provides accurate results. The app also features split and speed trap settings.";
+    document.getElementById('timer_image').setAttribute("src", "/wp-content/uploads/2020/04/TBox_NoBg.png");
+    document.getElementById('timer_text').innerHTML = "T-Box: The smallest sports timing console on the market connects instantly to your app and photocells for a quick set-up on the day.";
+    document.getElementById('app_link').innerHTML = "View Product Page";
+    document.getElementById('app_link').setAttribute("href", "/smart-chrono");
+    document.getElementById('timer_link').innerHTML = "View Product Page";
+    document.getElementById('timer_link').setAttribute("href", "/tbox");
+  };
+  function showJumping() {
+    document.getElementById('your_solution_motorsport').innerHTML = "+ Showjumping";
+    appSelection = "+ £40 Smart Jumping annual sub";
+    document.getElementById('app_itemised').innerHTML = "1 x Smart Jumping Annual Sub (£40)";
+    document.getElementById('timer_itemised').innerHTML = "1 x TBox (£490)";
+    solutionPrice = timerPrice + photocellPrice + displayPrice;
+    document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
+    document.getElementById('app_image').setAttribute("src", "https://www.sportstimingsystems.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/m/smartjumping1.png");
+    document.getElementById('app_text').innerHTML = "Smart Jumping: The app for quick and easy Showjumping timing.";
+    document.getElementById('timer_image').setAttribute("src", "/wp-content/uploads/2020/04/TBox_NoBg.png");
+    document.getElementById('timer_text').innerHTML = "T-Box: The smallest sports timing console on the market connects instantly to your app and photocells for a quick set-up on the day.";
+    document.getElementById('app_link').innerHTML = "View Product Page";
+    document.getElementById('app_link').setAttribute("href", "/smart-jumping");
+    document.getElementById('timer_link').innerHTML = "View Product Page";
+    document.getElementById('timer_link').setAttribute("href", "/tbox");
+  };
+  function winterSport() {
+    document.getElementById('your_solution_motorsport').innerHTML = "+ Winter Sports";
+    document.getElementById('app_itemised').innerHTML = "1 x SmartChrono Annual Sub (£40)";
+    document.getElementById('timer_itemised').innerHTML = "1 x TBox (£260)";
+    document.getElementById('app_image').setAttribute("src", "https://www.sportstimingsystems.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/m/smart_chrono_app.png");
+    document.getElementById('app_text').innerHTML = "SmartChrono: The app for quick and easy point-to-point timing. Combine with the low cost T-Box and photocells for a simple timing set-up that provides accurate results. The app also features split and speed trap settings.";
+    document.getElementById('timer_image').setAttribute("src", "/wp-content/uploads/2020/04/TBox_NoBg.png");
+    document.getElementById('timer_text').innerHTML = "T-Box: The smallest sports timing console on the market connects instantly to your app and photocells for a quick set-up on the day.";
+    appSelection = "+ £40 SmartChrono annual sub";
+    solutionPrice = timerPrice + photocellPrice + displayPrice;
+    document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
+    document.getElementById('app_link').innerHTML = "View Product Page";
+    document.getElementById('app_link').setAttribute("href", "/smartchrono");
+    document.getElementById('timer_link').innerHTML = "View Product Page";
+    document.getElementById('timer_link').setAttribute("href", "/tbox");
+  };
+  function trainingSport() {
+    document.getElementById('your_solution_motorsport').innerHTML = "+ Training";
+    document.getElementById('app_itemised').innerHTML = "1 x SmartChrono Annual Sub (£40)";
+    document.getElementById('timer_itemised').innerHTML = "1 x TBox (£490)";
+    document.getElementById('app_image').setAttribute("src", "https://www.sportstimingsystems.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/m/smart_chrono_app.png");
+    document.getElementById('app_text').innerHTML = "SmartChrono: The app for quick and easy point-to-point timing. Combine with the low cost T-Box and photocells for a simple timing set-up that provides accurate results. The app also features split and speed trap settings.";
+    document.getElementById('timer_image').setAttribute("src", "/wp-content/uploads/2020/04/TBox_NoBg.png");
+    document.getElementById('timer_text').innerHTML = "T-Box: The smallest sports timing console on the market connects instantly to your app and photocells for a quick set-up on the day.";
+    appSelection = "+ £40 SmartChrono annual sub";
+    solutionPrice = timerPrice + photocellPrice + displayPrice;
+    document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
+    document.getElementById('app_link').innerHTML = "View Product Page";
+    document.getElementById('app_link').setAttribute("href", "/smartchrono");
+    document.getElementById('timer_link').innerHTML = "View Product Page";
+    document.getElementById('timer_link').setAttribute("href", "/tbox");
+  };
+  function photocellOneTimingPoint() {
+    document.getElementById('your_solution_timing_points').innerHTML = "+ One Timing Point";
+    document.getElementById('photocell_itemised').innerHTML = "1 x WIRC Photocells - Pair (£340)";
+    document.getElementById('photocell_image').setAttribute("src", "/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
+    document.getElementById('photocell_text').innerHTML = "One set of WIRC Photocells.";
+    photocellPrice = 340;
+    solutionPrice = timerPrice + photocellPrice + displayPrice;
+    document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
+    document.getElementById('photocell_link').innerHTML = "View Product Page";
+    document.getElementById('photocell_link').setAttribute("href", "/wirc-photocells");
+  };
+  function photocellTwoTimingPoint() {
+    document.getElementById('your_solution_timing_points').innerHTML = "+ Two Timing Points";
+    document.getElementById('photocell_itemised').innerHTML = "2 x WIRC Photocells - Pair (£510)";
+    document.getElementById('photocell_image').setAttribute("src", "/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
+    document.getElementById('photocell_text').innerHTML = "Two sets of WIRC Photocells.";
+    photocellPrice = 510;
+    solutionPrice = timerPrice + photocellPrice + displayPrice;
+    document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
+    document.getElementById('photocell_link').innerHTML = "View Product Page";
+    document.getElementById('photocell_link').setAttribute("href", "/wirc-photocells");
+  };
+  function photocellThreeTimingPoint() {
+    document.getElementById('your_solution_timing_points').innerHTML = "+ Three Timing Points";
+    document.getElementById('photocell_itemised').innerHTML = "3 x WIRC Photocells - Pair (£760)";
+    document.getElementById('photocell_image').setAttribute("src", "/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
+    document.getElementById('photocell_text').innerHTML = "Three sets of WIRC Photocells.";
+    photocellPrice = 760;
+    solutionPrice = timerPrice + photocellPrice + displayPrice;
+    document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
+    document.getElementById('photocell_link').innerHTML = "View Product Page";
+    document.getElementById('photocell_link').setAttribute("href", "/wirc-photocells");
+  };
+  function photocellFourTimingPoint() {
+    document.getElementById('your_solution_timing_points').innerHTML = "+ Four Timing Points";
+    document.getElementById('photocell_itemised').innerHTML = "4 x WIRC Photocells - Pair (£970)";
+    document.getElementById('photocell_image').setAttribute("src", "/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
+    document.getElementById('photocell_text').innerHTML = "Four sets of WIRC Photocells.";
+    photocellPrice = 970;
+    solutionPrice = timerPrice + photocellPrice + displayPrice;
+    document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
+    document.getElementById('photocell_link').innerHTML = "View Product Page";
+    document.getElementById('photocell_link').setAttribute("href", "/wirc-photocells");
+  };
+  function displayOn() {
+    document.getElementById('display_image').setAttribute("src", "https://www.sportstimingsystems.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/l/mled.jpg");
+    document.getElementById('display_text').innerHTML = "Multi Colour Race Timing Clock controlled from your iOS device or scoring app.";
+    document.getElementById('display_itemised').innerHTML = "1 x MLED Display (£1035)";
+    displayPrice = 1035;
+    solutionPrice = timerPrice + photocellPrice + displayPrice;
+    document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
+    document.getElementById('your_solution_display').innerHTML = "+ LED Display";
+    document.getElementById('display_link').innerHTML = "View Product Page";
+    document.getElementById('display_link').setAttribute("href", "/mled");
+  };
+  function displayOff() {
+    displayPrice = 0;
+    solutionPrice = timerPrice + photocellPrice + displayPrice;
+    document.getElementById('your_solution_display').innerHTML = " ";
+    document.getElementById('display_itemised').innerHTML = " ";
+    document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
+    document.getElementById('display_image').setAttribute("src", "");
+    document.getElementById('display_text').innerHTML = "";
+    document.getElementById('display_link').innerHTML = " ";
+    document.getElementById('display_link').setAttribute("href", "#");
+  };
+  document.getElementById('motorsport_sport').addEventListener('click', motorSport);
+  document.getElementById('showjumping_sport').addEventListener('click', showJumping);
+  document.getElementById('wintersport_sport').addEventListener('click', winterSport);
+  document.getElementById('training_sport').addEventListener('click', trainingSport);
+  document.getElementById('one_timing_point').addEventListener('click', photocellOneTimingPoint);
+  document.getElementById('two_timing_point').addEventListener('click', photocellTwoTimingPoint);
+  document.getElementById('three_timing_point').addEventListener('click', photocellThreeTimingPoint);
+  document.getElementById('four_timing_point').addEventListener('click', photocellFourTimingPoint);
+  document.getElementById('display_yes').addEventListener('click', displayOn);
+  document.getElementById('display_no').addEventListener('click', displayOff);
+</script>
