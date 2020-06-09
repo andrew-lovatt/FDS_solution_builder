@@ -15,9 +15,9 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-        <button id="motorsport_sport" class="btn btn-outline-dark" style="font-size:16px">Motorsport</button>
+      <button id="motorsport_sport" class="btn btn-outline-dark" style="font-size:16px">Motorsport</button>
       <button id="showjumping_sport" class="btn btn-outline-dark" style="font-size:16px">Showjumping</button>
-      <button id="wintersport_sport" class="btn btn-outline-dark" style="font-size:16px">Winter Sport</button>
+      <button id="wintersport_sport" class="btn btn-outline-dark"style="font-size:16px">Winter Sport</button>
       <button id="training_sport" class="btn btn-outline-dark" style="font-size:16px">Training</button>
     </div>
   </div>
@@ -129,12 +129,19 @@
     document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
     document.getElementById('app_image').setAttribute("src", "https://www.sportstimingsystems.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/m/smart_chrono_app.png");
     document.getElementById('app_text').innerHTML = "SmartChrono: The app for quick and easy point-to-point timing. Combine with the low cost T-Box and photocells for a simple timing set-up that provides accurate results. The app also features split and speed trap settings.";
-    document.getElementById('timer_image').setAttribute("src", "/wp-content/uploads/2020/04/TBox_NoBg.png");
+    document.getElementById('timer_image').setAttribute("src", "https://fdstiming.co.uk/wp-content/uploads/2020/04/TBox_NoBg.png");
     document.getElementById('timer_text').innerHTML = "T-Box: The smallest sports timing console on the market connects instantly to your app and photocells for a quick set-up on the day.";
     document.getElementById('app_link').innerHTML = "View Product Page";
-    document.getElementById('app_link').setAttribute("href", "/smart-chrono");
+    document.getElementById('app_link').setAttribute("href", "https://fdstiming.co.uk/smart-chrono");
     document.getElementById('timer_link').innerHTML = "View Product Page";
-    document.getElementById('timer_link').setAttribute("href", "/tbox");
+    document.getElementById('timer_link').setAttribute("href", "https://fdstiming.co.uk/tbox");
+    // Corrects active button state for each question group
+    document.getElementById('motorsport_sport').className = "btn btn-primary";
+    document.getElementById('showjumping_sport').className = "btn btn-outline-dark";
+    document.getElementById('wintersport_sport').className = "btn btn-outline-dark";
+    document.getElementById('training_sport').className = "btn btn-outline-dark";
+    // Adds selection to Sports field of Everest Contact Form
+    document.getElementById('evf-1293-field_PwB2lakPdo-9').value = "Motorsport";
   };
   function showJumping() {
     document.getElementById('your_solution_motorsport').innerHTML = "+ Showjumping";
@@ -145,12 +152,19 @@
     document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
     document.getElementById('app_image').setAttribute("src", "https://www.sportstimingsystems.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/m/smartjumping1.png");
     document.getElementById('app_text').innerHTML = "Smart Jumping: The app for quick and easy Showjumping timing.";
-    document.getElementById('timer_image').setAttribute("src", "/wp-content/uploads/2020/04/TBox_NoBg.png");
+    document.getElementById('timer_image').setAttribute("src", "https://fdstiming.co.uk/wp-content/uploads/2020/04/TBox_NoBg.png");
     document.getElementById('timer_text').innerHTML = "T-Box: The smallest sports timing console on the market connects instantly to your app and photocells for a quick set-up on the day.";
     document.getElementById('app_link').innerHTML = "View Product Page";
-    document.getElementById('app_link').setAttribute("href", "/smart-jumping");
+    document.getElementById('app_link').setAttribute("href", "https://fdstiming.co.uk/smart-jumping");
     document.getElementById('timer_link').innerHTML = "View Product Page";
-    document.getElementById('timer_link').setAttribute("href", "/tbox");
+    document.getElementById('timer_link').setAttribute("href", "https://fdstiming.co.uk/tbox");
+    // Corrects active button state for each question group
+    document.getElementById('motorsport_sport').className = "btn btn-outline-dark";
+    document.getElementById('showjumping_sport').className = "btn btn-primary";
+    document.getElementById('wintersport_sport').className = "btn btn-outline-dark";
+    document.getElementById('training_sport').className = "btn btn-outline-dark";
+    // Adds selection to Sports field of Everest Contact Form
+    document.getElementById('evf-1293-field_PwB2lakPdo-9').value = "Showjumping";
   };
   function winterSport() {
     document.getElementById('your_solution_motorsport').innerHTML = "+ Winter Sports";
@@ -158,15 +172,22 @@
     document.getElementById('timer_itemised').innerHTML = "1 x TBox (£260)";
     document.getElementById('app_image').setAttribute("src", "https://www.sportstimingsystems.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/m/smart_chrono_app.png");
     document.getElementById('app_text').innerHTML = "SmartChrono: The app for quick and easy point-to-point timing. Combine with the low cost T-Box and photocells for a simple timing set-up that provides accurate results. The app also features split and speed trap settings.";
-    document.getElementById('timer_image').setAttribute("src", "/wp-content/uploads/2020/04/TBox_NoBg.png");
+    document.getElementById('timer_image').setAttribute("src", "https://fdstiming.co.uk/wp-content/uploads/2020/04/TBox_NoBg.png");
     document.getElementById('timer_text').innerHTML = "T-Box: The smallest sports timing console on the market connects instantly to your app and photocells for a quick set-up on the day.";
     appSelection = "+ £40 SmartChrono annual sub";
     solutionPrice = timerPrice + photocellPrice + displayPrice;
     document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
     document.getElementById('app_link').innerHTML = "View Product Page";
-    document.getElementById('app_link').setAttribute("href", "/smartchrono");
+    document.getElementById('app_link').setAttribute("href", "https://fdstiming.co.uk/smartchrono");
     document.getElementById('timer_link').innerHTML = "View Product Page";
-    document.getElementById('timer_link').setAttribute("href", "/tbox");
+    document.getElementById('timer_link').setAttribute("href", "https://fdstiming.co.uk/tbox");
+    // Corrects active button state for each question group
+    document.getElementById('motorsport_sport').className = "btn btn-outline-dark";
+    document.getElementById('showjumping_sport').className = "btn btn-outline-dark";
+    document.getElementById('wintersport_sport').className = "btn btn-primary";
+    document.getElementById('training_sport').className = "btn btn-outline-dark";
+    // Adds selection to Sports field of Everest Contact Form
+    document.getElementById('evf-1293-field_PwB2lakPdo-9').value = "Winter Sports";
   };
   function trainingSport() {
     document.getElementById('your_solution_motorsport').innerHTML = "+ Training";
@@ -174,59 +195,94 @@
     document.getElementById('timer_itemised').innerHTML = "1 x TBox (£490)";
     document.getElementById('app_image').setAttribute("src", "https://www.sportstimingsystems.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/m/smart_chrono_app.png");
     document.getElementById('app_text').innerHTML = "SmartChrono: The app for quick and easy point-to-point timing. Combine with the low cost T-Box and photocells for a simple timing set-up that provides accurate results. The app also features split and speed trap settings.";
-    document.getElementById('timer_image').setAttribute("src", "/wp-content/uploads/2020/04/TBox_NoBg.png");
+    document.getElementById('timer_image').setAttribute("src", "https://fdstiming.co.uk/wp-content/uploads/2020/04/TBox_NoBg.png");
     document.getElementById('timer_text').innerHTML = "T-Box: The smallest sports timing console on the market connects instantly to your app and photocells for a quick set-up on the day.";
     appSelection = "+ £40 SmartChrono annual sub";
     solutionPrice = timerPrice + photocellPrice + displayPrice;
     document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
     document.getElementById('app_link').innerHTML = "View Product Page";
-    document.getElementById('app_link').setAttribute("href", "/smartchrono");
+    document.getElementById('app_link').setAttribute("href", "https://fdstiming.co.uk/smartchrono");
     document.getElementById('timer_link').innerHTML = "View Product Page";
-    document.getElementById('timer_link').setAttribute("href", "/tbox");
+    document.getElementById('timer_link').setAttribute("href", "https://fdstiming.co.uk/tbox");
+    // Corrects active button state for each question group
+    document.getElementById('motorsport_sport').className = "btn btn-outline-dark";
+    document.getElementById('showjumping_sport').className = "btn btn-outline-dark";
+    document.getElementById('wintersport_sport').className = "btn btn-outline-dark";
+    document.getElementById('training_sport').className = "btn btn-primary";
+    // Adds selection to Sports field of Everest Contact Form
+    document.getElementById('evf-1293-field_PwB2lakPdo-9').value = "Training";
   };
   function photocellOneTimingPoint() {
     document.getElementById('your_solution_timing_points').innerHTML = "+ One Timing Point";
     document.getElementById('photocell_itemised').innerHTML = "1 x WIRC Photocells - Pair (£340)";
-    document.getElementById('photocell_image').setAttribute("src", "/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
+    document.getElementById('photocell_image').setAttribute("src", "https://fdstiming.co.uk/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
     document.getElementById('photocell_text').innerHTML = "One set of WIRC Photocells.";
     photocellPrice = 340;
     solutionPrice = timerPrice + photocellPrice + displayPrice;
     document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
     document.getElementById('photocell_link').innerHTML = "View Product Page";
-    document.getElementById('photocell_link').setAttribute("href", "/wirc-photocells");
+    document.getElementById('photocell_link').setAttribute("href", "https://fdstiming.co.uk/wirc-photocells");
+    // Corrects active button state for each question group
+    document.getElementById('one_timing_point').className = "btn btn-primary";
+    document.getElementById('two_timing_point').className = "btn btn-outline-dark";
+    document.getElementById('three_timing_point').className = "btn btn-outline-dark";
+    document.getElementById('four_timing_point').className = "btn btn-outline-dark";
+    // Adds selection to Number of Timing Points field of Everest Contact Form
+    document.getElementById('evf-1293-field_2A9JNresea-10').value = "One";
   };
   function photocellTwoTimingPoint() {
     document.getElementById('your_solution_timing_points').innerHTML = "+ Two Timing Points";
     document.getElementById('photocell_itemised').innerHTML = "2 x WIRC Photocells - Pair (£510)";
-    document.getElementById('photocell_image').setAttribute("src", "/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
+    document.getElementById('photocell_image').setAttribute("src", "https://fdstiming.co.uk/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
     document.getElementById('photocell_text').innerHTML = "Two sets of WIRC Photocells.";
     photocellPrice = 510;
     solutionPrice = timerPrice + photocellPrice + displayPrice;
     document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
     document.getElementById('photocell_link').innerHTML = "View Product Page";
-    document.getElementById('photocell_link').setAttribute("href", "/wirc-photocells");
+    document.getElementById('photocell_link').setAttribute("href", "https://fdstiming.co.uk/wirc-photocells");
+    // Corrects active button state for each question group
+    document.getElementById('one_timing_point').className = "btn btn-outline-dark";
+    document.getElementById('two_timing_point').className = "btn btn-primary";
+    document.getElementById('three_timing_point').className = "btn btn-outline-dark";
+    document.getElementById('four_timing_point').className = "btn btn-outline-dark";
+    // Adds selection to Number of Timing Points field Everest Contact Form
+    document.getElementById('evf-1293-field_2A9JNresea-10').value = "Two";
   };
   function photocellThreeTimingPoint() {
     document.getElementById('your_solution_timing_points').innerHTML = "+ Three Timing Points";
     document.getElementById('photocell_itemised').innerHTML = "3 x WIRC Photocells - Pair (£760)";
-    document.getElementById('photocell_image').setAttribute("src", "/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
+    document.getElementById('photocell_image').setAttribute("src", "https://fdstiming.co.uk/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
     document.getElementById('photocell_text').innerHTML = "Three sets of WIRC Photocells.";
     photocellPrice = 760;
     solutionPrice = timerPrice + photocellPrice + displayPrice;
     document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
     document.getElementById('photocell_link').innerHTML = "View Product Page";
-    document.getElementById('photocell_link').setAttribute("href", "/wirc-photocells");
+    document.getElementById('photocell_link').setAttribute("href", "https://fdstiming.co.uk/wirc-photocells");
+    // Corrects active button state for each question group
+    document.getElementById('one_timing_point').className = "btn btn-outline-dark";
+    document.getElementById('two_timing_point').className = "btn btn-outline-dark";
+    document.getElementById('three_timing_point').className = "btn btn-primary";
+    document.getElementById('four_timing_point').className = "btn btn-outline-dark";
+    // Adds selection to Number of Timing Points field Everest Contact Form
+    document.getElementById('evf-1293-field_2A9JNresea-10').value = "Three";
   };
   function photocellFourTimingPoint() {
     document.getElementById('your_solution_timing_points').innerHTML = "+ Four Timing Points";
     document.getElementById('photocell_itemised').innerHTML = "4 x WIRC Photocells - Pair (£970)";
-    document.getElementById('photocell_image').setAttribute("src", "/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
+    document.getElementById('photocell_image').setAttribute("src", "https://fdstiming.co.uk/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
     document.getElementById('photocell_text').innerHTML = "Four sets of WIRC Photocells.";
     photocellPrice = 970;
     solutionPrice = timerPrice + photocellPrice + displayPrice;
     document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
     document.getElementById('photocell_link').innerHTML = "View Product Page";
-    document.getElementById('photocell_link').setAttribute("href", "/wirc-photocells");
+    document.getElementById('photocell_link').setAttribute("href", "https://fdstiming.co.uk/wirc-photocells");
+    // Corrects active button state for each question group
+    document.getElementById('one_timing_point').className = "btn btn-outline-dark";
+    document.getElementById('two_timing_point').className = "btn btn-outline-dark";
+    document.getElementById('three_timing_point').className = "btn btn-outline-dark";
+    document.getElementById('four_timing_point').className = "btn btn-primary";
+    // Adds selection to Number of Timing Points field Everest Contact Form
+    document.getElementById('evf-1293-field_2A9JNresea-10').value = "Four";
   };
   function displayOn() {
     document.getElementById('display_image').setAttribute("src", "https://www.sportstimingsystems.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/l/mled.jpg");
@@ -237,7 +293,12 @@
     document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
     document.getElementById('your_solution_display').innerHTML = "+ LED Display";
     document.getElementById('display_link').innerHTML = "View Product Page";
-    document.getElementById('display_link').setAttribute("href", "/mled");
+    document.getElementById('display_link').setAttribute("href", "https://fdstiming.co.uk/mled");
+    // Corrects active button state for each question group
+    document.getElementById('display_yes').className = "btn btn-primary";
+    document.getElementById('display_no').className = "btn btn-outline-dark";
+    // Adds selection to Display Required field of Everest Contact Form
+    document.getElementById('evf-1293-field_MDt9Us9UzS-11').value = "Yes";
   };
   function displayOff() {
     displayPrice = 0;
@@ -249,6 +310,11 @@
     document.getElementById('display_text').innerHTML = "";
     document.getElementById('display_link').innerHTML = " ";
     document.getElementById('display_link').setAttribute("href", "#");
+    // Corrects active button state for each question group
+    document.getElementById('display_yes').className = "btn btn-outline-dark";
+    document.getElementById('display_no').className = "btn btn-primary";
+    // Adds selection to Display Required field of Everest Contact Form
+    document.getElementById('evf-1293-field_MDt9Us9UzS-11').value = "No";
   };
   document.getElementById('motorsport_sport').addEventListener('click', motorSport);
   document.getElementById('showjumping_sport').addEventListener('click', showJumping);
