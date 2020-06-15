@@ -1,5 +1,11 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12  p-3"><h6><strong>Build your own budget solution for point-to-point events and training in 3 quick questions</strong></h6></div>
@@ -25,7 +31,7 @@
       
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12  p-3"><h6>How many timing points do you require?</h6></div>
+    <div class="col-md-12 p-3"><h6>How many timing points do you require?</h6></div>
   </div>
 </div>
 
@@ -42,27 +48,28 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12  p-3"><h6>Do you require a display?</h6></div>
+    <div class="col-md-12 p-3"><h6>Do you require a display?</h6></div>
   </div>
 </div>
       
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <button id="display_yes" class="btn btn-outline-dark" style="font-size:16px">Yes</button>
-      <button id="display_no" class="btn btn-outline-dark" style="font-size:16px">No</button>
+      <a href="#your_solution_preview"><button id="display_yes" class="btn btn-outline-dark" style="font-size:16px">Yes</button></a>
+      <a href="#your_solution_preview"><button id="display_no" class="btn btn-outline-dark" style="font-size:16px">No</button></a>
     </div>
   </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" id="your_solution_preview">
   <div class="row">
-    <div class="col-md-4  p-4"><h3>Your Solution</h3>
+    <div class="col-md-4 p-4"><h3>Your Solution</h3>
       <p id="your_solution_motorsport"></p>
       <p id="your_solution_timing_points"></p>
       <p id="your_solution_display"></p>
+      <a href="#contact_us_preview"><button id="display_yes" class="btn btn-outline-dark" style="font-size:16px">Contact Us</button></a>
     </div>
-    <div class="col-md-8  p-4"><h3 id="total_cost"></h3>
+    <div class="col-md-8 p-4"><h3 id="total_cost"></h3>
       <p id="app_itemised"></p>
       <p id="timer_itemised"></p>
       <p id="photocell_itemised"></p>
@@ -111,6 +118,14 @@
     <div class="col-lg-2"><img id="display_image" width="100%"></div>
     <div class="col-lg-8  p-3"><p id="display_text"></p>
       <a id="display_link"></a></div>
+  </div>
+</div>
+
+<hr style="border:1px solid rgb(122, 122, 122)">
+
+<div class="container-fluid">
+  <div class="row">
+    <div id="contact_us_preview" class="col-lg-12  p-4"><h3>Contact Us</h3></div>
   </div>
 </div>
 
@@ -178,7 +193,7 @@
     solutionPrice = timerPrice + photocellPrice + displayPrice;
     document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
     document.getElementById('app_link').innerHTML = "View Product Page";
-    document.getElementById('app_link').setAttribute("href", "https://fdstiming.co.uk/smartchrono");
+    document.getElementById('app_link').setAttribute("href", "https://fdstiming.co.uk/smart-chrono");
     document.getElementById('timer_link').innerHTML = "View Product Page";
     document.getElementById('timer_link').setAttribute("href", "https://fdstiming.co.uk/tbox");
     // Corrects active button state for each question group
@@ -201,7 +216,7 @@
     solutionPrice = timerPrice + photocellPrice + displayPrice;
     document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
     document.getElementById('app_link').innerHTML = "View Product Page";
-    document.getElementById('app_link').setAttribute("href", "https://fdstiming.co.uk/smartchrono");
+    document.getElementById('app_link').setAttribute("href", "https://fdstiming.co.uk/smart-chrono");
     document.getElementById('timer_link').innerHTML = "View Product Page";
     document.getElementById('timer_link').setAttribute("href", "https://fdstiming.co.uk/tbox");
     // Corrects active button state for each question group
@@ -216,7 +231,7 @@
     document.getElementById('your_solution_timing_points').innerHTML = "+ One Timing Point";
     document.getElementById('photocell_itemised').innerHTML = "1 x WIRC Photocells - Pair (£340)";
     document.getElementById('photocell_image').setAttribute("src", "https://fdstiming.co.uk/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
-    document.getElementById('photocell_text').innerHTML = "One set of WIRC Photocells.";
+    document.getElementById('photocell_text').innerHTML = "One set of WIRC Photocells. Low cost photocells that work seamlessly with T-Box via Bluetooth or cable.";
     photocellPrice = 340;
     solutionPrice = timerPrice + photocellPrice + displayPrice;
     document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
@@ -234,7 +249,7 @@
     document.getElementById('your_solution_timing_points').innerHTML = "+ Two Timing Points";
     document.getElementById('photocell_itemised').innerHTML = "2 x WIRC Photocells - Pair (£510)";
     document.getElementById('photocell_image').setAttribute("src", "https://fdstiming.co.uk/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
-    document.getElementById('photocell_text').innerHTML = "Two sets of WIRC Photocells.";
+    document.getElementById('photocell_text').innerHTML = "Two sets of WIRC Photocells. Low cost photocells that work seamlessly with T-Box via Bluetooth or cable.";
     photocellPrice = 510;
     solutionPrice = timerPrice + photocellPrice + displayPrice;
     document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
@@ -252,7 +267,7 @@
     document.getElementById('your_solution_timing_points').innerHTML = "+ Three Timing Points";
     document.getElementById('photocell_itemised').innerHTML = "3 x WIRC Photocells - Pair (£760)";
     document.getElementById('photocell_image').setAttribute("src", "https://fdstiming.co.uk/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
-    document.getElementById('photocell_text').innerHTML = "Three sets of WIRC Photocells.";
+    document.getElementById('photocell_text').innerHTML = "Three sets of WIRC Photocells. Low cost photocells that work seamlessly with T-Box via Bluetooth or cable.";
     photocellPrice = 760;
     solutionPrice = timerPrice + photocellPrice + displayPrice;
     document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
@@ -270,7 +285,7 @@
     document.getElementById('your_solution_timing_points').innerHTML = "+ Four Timing Points";
     document.getElementById('photocell_itemised').innerHTML = "4 x WIRC Photocells - Pair (£970)";
     document.getElementById('photocell_image').setAttribute("src", "https://fdstiming.co.uk/wp-content/uploads/2020/04/WIRC_Photocell_NoBG.png");
-    document.getElementById('photocell_text').innerHTML = "Four sets of WIRC Photocells.";
+    document.getElementById('photocell_text').innerHTML = "Four sets of WIRC Photocells. Low cost photocells that work seamlessly with T-Box via Bluetooth or cable.";
     photocellPrice = 970;
     solutionPrice = timerPrice + photocellPrice + displayPrice;
     document.getElementById('total_cost').innerHTML = `Price: £${solutionPrice} ${appSelection}`;
